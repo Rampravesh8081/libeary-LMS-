@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "book";
+    Layout = "~/Views/Shared/StudentLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row mx-auto w-75 ">
+        <h2 class="text-primary text-center">BOOK</h2>
+        @* @if(ViewBag.data.Rows.Count > 0)
+        {
+
+            foreach (var row in ViewBag.data.Rows)
+            {
+                <div class="card m-1" style="width: 18rem;">
+                    <a href="/student/issuedetails">
+                        <img src="~/Content/BookPhotos/@row["Bpic"]" height="80" width="80" class="card-img-top" alt="...">
+
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">@row[1]</li>
+                            <li class="list-group-item">@row[5]</li>
+                            <li class="list-group-item">@row[11]</li>
+                        </ul>
+                    </a>
+                </div>
+            }
+        }
+        *@
+    <div class="row ">
+        @if (ViewBag.data.Rows.Count > 0)
+        {
+            foreach (var row in ViewBag.data.Rows)
+            {
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10 " >
+                    <div class="card p-2 border-0 shadow-lg mb-3">
+                        <div class="row ">
+                            <div class="col-sm-3">
+                                <img src="~/Content/BookPhotos/@row[11]" class="img-fluid w-100 " style="height:150px" />
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="fs-4 " style="font-size:17px !important">ID - <b> @row[1] </b>|| Book Name -  <b>@row[6] </b> || Author Name - <b>@row[2]</b> || Branch - <b>@row[7]</b> Semester - <b>@row[5]</b> || Language - <b>@row[12]</b> || Pages - <b>@row[13]</b> || Cost - <b>@row[3]</b> || Stocks -  <b>@row[8]</b> || Publish Date - <b>@row[4]</b></p>
+                                <p class="fs-5 ">Description - @row[14] </p>
+                                <a class="btn  bg-danger" href="/student/issuedetails">Issue Book <i class="fa-solid fa-download"></i></a> <b>Added on : </b>@row[9]
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-sm-1"></div>
+            }
+        }
+            </div>
+        @*<table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th></th>
+                <th></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+           @if(ViewBag.data.Rows.Count > 0)
+           {
+               foreach (var row in ViewBag.data.Rows)
+               {
+                   <td>@row[1]</td>
+                   <td>
+                       Author Name&nbsp;&nbsp;- &nbsp;&nbsp; <b></b>&nbsp;&nbsp;|&nbsp;&nbsp;Book Name&nbsp;&nbsp;-&nbsp;&nbsp;<b>@row[6]</b>&nbsp;&nbsp;|&nbsp;&nbsp;Language&nbsp;&nbsp; -&nbsp;&nbsp; <b>@row[12]</b>
+                       <br />Publish Date&nbsp;&nbsp;-&nbsp;&nbsp;<b>@row[4]</b>&nbsp;&nbsp;|&nbsp;&nbsp;Pages&nbsp;&nbsp;-&nbsp;&nbsp;<b>@row[13]</b>
+                       <br />Cost&nbsp;&nbsp;-&nbsp;&nbsp;<b>@row[3]</b>&nbsp;&nbsp;|&nbsp;&nbsp;Actual Stocks&nbsp;&nbsp;-&nbsp;&nbsp;<b>@row[8]</b><br />
+                       Description&nbsp;&nbsp;-&nbsp;&nbsp;@row[14]
+                   </td>
+                   <td >
+                       <img src="~/Content/BookPhotos/@row[11]" height="100" width="100" />
+                   </td>
+                    }
+                }
+               </tr>
+                </tbody>
+            </table>*@
+    </div>
+        </div>
+

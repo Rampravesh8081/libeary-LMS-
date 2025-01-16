@@ -1,0 +1,514 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/css/all.min.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Content/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: #0097A7;
+        }
+        .ufooter a:hover {
+            color: black;
+        }
+
+        .circle {
+            height: 30px;
+            width: 30px;
+            border: 1px solid black;
+            border-radius: 50%;
+            float: left;
+        }
+
+        .ufooter a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .hline {
+            height: 2px;
+            width: 80px;
+            background: #29B6F6;
+        }
+
+        .d:hover {
+            color: #00838f;
+        }
+
+        .team-img:hover {
+            filter: grayscale(100%);
+            transition: all 1s;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid px-0">
+        <nav class="navbar navbar-expand-sm navbar-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="Index"><img src="~/Content/imges/lmslogo.png" height="49" width="49" />  E-Library</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About Us</a>
+                            
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#faqs">Faqs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contactus">Contact Us</a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+                <div>
+
+                    <a class="btn btn-sm " href="SignUp" style="background: #00BCD4; color: white; ">Sign Up</a>
+                    <a class="btn btn-sm " href="Login" style="background: #00BCD4; color: white;">Sign In</a>
+                </div>
+            </div>
+        </nav>
+        <div class="jumbotron text-center alert alert-primary" style="margin-bottom: 0; color: #00695C;">
+            <h1>Online Library Management System</h1>
+            <p>MMIT Hariharpur Gorakhpur</p>
+        </div>
+
+        <div class="row">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <img src="~/Content/imges/slideimg1.jpg" height="450" class="d-block w-100" alt="..">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="~/Content/imges/slideimg4.jpg" height="450" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="~/Content/imges/slideimg5.jpg" height="450" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="container bg-body-tertiary" id="about">
+
+            <div class="row aboutus mt-5 mb-5" style="min-height:500px;">
+                <div class="text-center mb-5 mt-4" style="line-height:20px;">
+
+                    <img src="~/Content/imges/lib.png" height="80" width="80" />
+                    <h3 class="text-center text-primary fw-bold mt-2">E-Library <b class="text-primary"></b> </h3>
+                    <p class="fw-medium">An On line Library Management System</p>
+                    <p>Our Online Library Management System efficiently oversees the details of library resources. <br/>
+                    including books and their authors, as well as the members borrowing these books. Our<br /> 
+                    system is meticulously designed to be computerized, streamlining and automating various<br />
+                    operations such as member information management, book issuance and returns. This<br />
+                    transition to a computerized library not only enhances the efficiency of maintenance tasks<br />
+                    but also significantly diminishes the manual workload, contributing to a more streamlined <br />
+                    and effective library management experience.</p>
+                </div>
+                
+                <div class="row mt-5">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-5">
+                        <h3>Why <b class="txt-color2">Us</b></h3>
+                        <p>
+                            Welcome to Indeed Learning
+                            At Indeed Learning, we believe in the power of education to transform lives. Our mission is to provide a comprehensive
+                            and user-friendly platform that empowers learners, educators, and organizations to achieve their educational goals
+                            through innovative technology and exceptional content.<br /><br />
+                            Our Mission
+                            Our mission is to make learning accessible, engaging, and effective for everyone. We strive to bridge the gap
+                            between traditional and digital education by offering a versatile Learning Management System that supports a wide
+                            range of learning styles and educational needs. Whether you're a student aiming to expand your knowledge, an
+                            instructor looking to deliver dynamic courses, or an organization seeking to train and upskill your team,
+                            Indeeed Learning is here to help you succeed.
+                        </p><div class="btn btn-info d">Contact Us</div>
+                    </div>
+                    <div class="col-sm-5 rounded-3 ">
+                        <img src="~/Content/imges/logoimg.jpg" height="400" width="600" />
+                    </div>
+                    <div class="col-sm-1"></div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- team-area -->
+        <div class="team-area mt-5 pt-5 pb-5 mb-5">
+
+            <div class="row justify-content-between title-margin mb-45">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+
+                    <div class="title pb-2">
+                        <h2 class="position-relative pl-25">Our Trainers</h2>
+                    </div><!-- /title -->
+                </div><!-- /col -->
+                <div class="col-sm-1 text-right">
+
+                </div><!-- /col -->
+            </div><!-- /row -->
+
+            <div class="team-wrapper">
+                <div class="row align-items-start theme-border-top award-margin">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                        <div class="row">
+
+                            <div class="col-xl-3  col-lg-3  col-md-6  col-sm-6 col-12 pl-xl-4 pr-xl-4">
+                                <div class="single-team position-relative">
+                                    <div class="single-team">
+                                        <div class="team-img over-hidden border-radius12 transition5 position-relative">
+                                            <img class="w-50 z-index-1" height="150" src="~/Content/imges/Admin.jpg" alt="client image 1">
+
+                                        </div><!-- /team-img -->
+                                        <div class="team-content text-center mt-20">
+                                            <h4 class="mb-1 mt-2">Rahul Sir</h4>
+                                            <span class="mb-0">Techpile Technology Pvt.Ltd</span>
+                                        </div>
+                                    </div><!-- /single-team -->
+                                </div><!-- /single-client -->
+                            </div><!-- /col -->
+                            <div class="col-xl-3  col-lg-3  col-md-6  col-sm-6 col-12 pl-xl-4 pr-xl-4">
+                                <div class="single-team position-relative">
+                                    <div class="single-team">
+                                        <div class="team-img over-hidden border-radius12 transition5 position-relative">
+                                            <img class="w-100 z-index-1" height="300" src="~/content/images/Divyamam.jpg.png" alt="client image 2">
+
+                                        </div><!-- /team-img -->
+                                        <div class="team-content text-center mt-20">
+                                            <h4 class="mb-1">Divya Mam</h4>
+                                            <span class="mb-0">Techpile Technology Pvt.Ltd</span>
+                                        </div>
+                                    </div><!-- /single-team -->
+                                </div><!-- /single-client -->
+                            </div><!-- /col -->
+                            <div class="col-xl-3  col-lg-3  col-md-6  col-sm-6 col-12 pl-xl-4 pr-xl-4">
+                                <div class="single-team position-relative">
+                                    <div class="single-team">
+                                        <div class="team-img over-hidden border-radius12 transition5 position-relative">
+                                            <img class="w-100 z-index-1" height="300" src="~/content/images/abhisir.png" alt="client image 3">
+
+                                        </div><!-- /team-img -->
+                                        <div class="team-content text-center mt-20">
+                                            <h4 class="mb-1">Abhishek Sir</h4>
+                                            <span class="mb-0">Techpile Technology Pvt.Ltd</span>
+                                        </div>
+                                    </div><!-- /single-team -->
+                                </div><!-- /single-client -->
+                            </div><!-- /col -->
+
+                            <div class="col-xl-3  col-lg-3  col-md-6  col-sm-6 col-12 pl-xl-4 pr-xl-4">
+                                <div class="single-teamv over-hidden position-relative">
+                                    <div class="single-team over-hidden">
+                                        <div class="team-img over-hidden border-radius12 transition5 position-relative">
+                                            <img class="w-100 z-index-1 over-hidden" height="300" src="~/content/images/nikhilsir.png" alt="client image 4">
+
+                                        </div><!-- /team-img -->
+                                        <div class="team-content text-center mt-20">
+                                            <h4 class="mb-1">Nikhil Sir</h4>
+                                            <span class="mb-0">Techpile Technology Pvt.Ltd</span>
+                                        </div>
+                                    </div><!-- /single-team -->
+                                </div><!-- /single-client -->
+                            </div><!-- /col -->
+
+
+
+                        </div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div><!-- /row -->
+            </div><!-- /team-wrapper -->
+
+        </div>
+
+
+       
+        <div class="row faqs  " style="min-height:250px;" id="faqs">
+            <div class="text-center fs-3 py-4 ">
+                <p class="fs-2 "> <b class="text-primary" style="border-bottom: 5px solid #0500ff; ">FAQs..<i class="fa-solid fa-person-circle-question txt-color2"></i></b></p>
+                Frequently Asked Question..?
+            </div>
+
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10 ">
+                <div class="row pt-5">
+                    <div class="col-sm-7">
+                        <div class="row shadow bg-body-tertiar py-2 my-4 fs-5 ">
+                            <div class="col-sm-11">
+
+                                <details>
+                                    <summary>   <b class="b">Where is a libary Located</b></summary>
+                                    <p>
+                                        -Main Library, Block 13<br />
+                                        - Mini Library, an extension of the Library, is located in Emiet Hostel.
+                                    </p>
+                                </details>
+                            </div>
+                            <div class="col-sm-1"><b>+</b></div>
+                        </div>
+                        <div class="row shadow bg-body-tertiar py-2 my-4 fs-5 ">
+                            <div class="col-sm-11">
+                                <details>
+                                    <summary>   <b class="b">What are the library hours? </b></summary>
+                                    <p>
+                                        Find the Library hours here. This is subject to change based on the severity of the pandemic prevalent at any given time and the Institute Regulations in force from time to time.
+                                    </p>
+                                </details>
+                            </div>
+                            <div class="col-sm-1"><b>+</b></div>
+                        </div>
+                        <div class="row shadow bg-body-tertiar py-2 fs-5 my-4 ">
+                            <div class="col-sm-11">
+                                <details>
+                                    <summary>   <b class="b"> Can I bring my personal books/notbook to the library </b></summary>
+                                    <p>
+                                        Yes, you may bring your personal books/notebooks to the Library under your care.
+                                    </p>
+                                </details>
+                            </div>
+                            <div class="col-sm-1"><b>+</b></div>
+                        </div>
+                        <div class="row shadow bg-body-tertiar py-2 fs-5 my-4">
+                            <div class="col-sm-11">
+                                <details>
+                                    <summary>   <b class="b"> Are food and beverage allowed in the library</b></summary>
+                                    <p>
+                                        <ul>
+                                            <li>
+                                                Outside food and beverages are allowed inside the Library. You may carry your water bottle.
+                                            </li>
+                                            <li>
+                                                Library provides hot water and green tea bags for the users. One must carry their mug for prevailing this service.
+                                            </li>
+                                        </ul>
+                                    </p>
+                                </details>
+
+                            </div>
+                            <div class="col-sm-1"><b>+</b></div>
+                        </div>
+                        <div class="row shadow bg-body-tertiar py-2 fs-5 my-4">
+                            <div class="col-sm-11">
+                                <details>
+                                    <summary>   <b class="b">Can mobile phones used in library?</b></summary>
+                                    <p>
+                                        The audible use of mobile phones in the library premises is highly discouraged.
+                                    </p>
+                                </details>
+
+                            </div>
+                            <div class="col-sm-1"><b>+</b></div>
+                        </div>
+                        <div class="row shadow bg-body-tertiar py-2 fs-5 my-4 ">
+                            <div class="col-sm-11">
+                                <details>
+                                    <summary>   <b class="b">	Does the library provide any orientation program to the fresher? </b></summary>
+                                    <p>
+                                        Yes, the Library at the Institute offers an orientation program to the students and others at the beginning of every academic year and also on demand from a group of students. Write to librarian@iitgn.ac.in for more details.
+                                    </p>
+                                </details>
+                            </div>
+                            <div class="col-sm-1"><b>+</b></div>
+                        </div>
+                        <div class="row shadow bg-body-tertiar py-2 fs-5 my-4 ">
+                            <div class="col-sm-11">
+                                <details>
+                                    <summary>
+                                        <b>
+                                            Are there any group study areas in the library?
+                                        </b>
+                                    </summary>
+                                    <p>Yes. Refer to here.</p>
+                                </details>
+                            </div>
+                            <div class="col-sm-1"><b>+</b></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-4 p-4 mt-3 rounded" style="background: #f2f2f2;max-height:250px">
+                        <h2>Have A Question</h2>
+                        <p>Your one stop solution efforties web design Explor pre-mode templets</p>
+
+                        <p>Blocks and more for a sleek websites customize easily, weather</p>
+                        <div class="btn  bg-mycolor3 text-light">Contact Us</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="row contactus    bg-body-tertiary" id="contactus">
+            <div class="col-sm-12 py-5">
+                <div class="text-center fs-2 " style="height:50px">
+                    Contact  <b class="text-primary">Us..<i class="fa-solid fa-location-dot txt-color2"></i> </b>
+                </div>
+            </div>
+            <div class="col-sm-12 mb-3">
+                <div class="row p3 px-5">
+                    <div class="col-sm-7 px-5">
+                        <h2>Get In Touch</h2>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of the page</p>
+                        <form method="post" action="/Home/addContact">
+                            <div class="row">
+
+                                <div class="col-sm-6 ">
+                                    <input type="text" name="fname" class="form-control " placeholder="Full Name" required />
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" name="lname" class="form-control  " placeholder="Last Name" required />
+                                </div>
+                            </div><br />
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input type="text" name="email" class="form-control  " placeholder="Your Email" required />
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="number" name="num" class="form-control  " placeholder="Phone" />
+                                </div>
+                            </div><br />
+                            <div class="row">
+                                <div class="col-sm-6 ">
+                                    <input type="text" name="subject" class="form-control  " placeholder="Subject" required />
+                                </div>
+                                <div class="col-sm-6">
+                                    <select class="form-control " name="course" required>
+                                        <option>Select Courses</option>
+                                        @if (ViewBag.table1.Rows.Count > 0)
+                                        {
+                                            foreach (var row in ViewBag.table1.Rows)
+                                            {
+                                                <option value="@row[0]">@row[1]</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div><br />
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <textarea rows="4" name="message" style="border:none;width:100%;padding-left:15px" placeholder="message" required></textarea>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6     ">
+                                    <input type="submit" value="Send Message" class=" form-control btn btn-outline-success rounded " style="width:35%;height:100%;border-radius:8px !important" />
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-5 bg-primary rounded p-5" style="color:grey">
+                        <h2 class="text-light">Contact Info</h2>
+                        <p style="color:grey">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece. </p>
+                        <hr class="text-light" />
+                        <i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;123, Lorem Ipsum, Dummy City<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FL-12345 USA<br />
+                        <i class="fa-solid fa-phone"></i> &nbsp; +(1) 123-234-456<br />
+                        <i class="fa-solid fa-envelope"></i>&nbsp; Info@EduLearn.com<br />
+                        <hr class="text-light" />
+                        <h3 class="text-light">Follow Us</h3>
+                        <div class="row">
+
+                            <div style="height: 50px; max-width: 50px; background: #ccd5f0;border-radius:50px"></div>
+                            &nbsp;
+                            <div style="height: 50px; max-width: 50px; background: #4cc2ff; border-radius: 50px"></div>   &nbsp;
+                            <div style="height: 50px; max-width: 50px; background: #5d6b99; border-radius: 50px"></div>
+                            &nbsp;
+                            <div style="height: 50px; max-width: 50px; background: #ff5ba3; border-radius: 50px"></div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7116.568736197609!2d80.96169454220191!3d26.894468806631963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1726581192165!5m2!1sen!2sin" width="100" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
+        <div class="row ufooter navbar" style="min-height:200px;background-color:">
+            <div class="col-sm-1 px-0"></div>
+            <div class="col-sm-3 mt-3 text-white">
+                <h3 class="text-dark">Contact info</h3>
+                <div class="hline mb-3 mt-3"></div>
+                <i class="fa-solid fa-location-dot"></i>123,Bridgemanganj,Maharajganj,<br />FL-12345 INDIA
+                <p class="mt-3"><i class="fa-solid fa-mobile-retro"></i> +91,7307279757</p>
+                <p class=""><i class="fa-regular fa-envelope"></i> in@deed.com</p>
+
+            </div>
+            <div class="col-sm-2 mt-3 bfoota">
+                <h3>Online Platform</h3>
+                <div class="hline mb-3 mt-3"></div>
+                <a href="#">About</a><br />
+                <a href="#">Cources</a><br />
+                <a href="#">Instructor</a><br />
+                <a href="#">Events</a><br />
+                <a href="#">Instructor Profile</a><br />
+                <a href="#">Purchase Guide</a>
+            </div>
+            <div class="col-sm-2 mt-3">
+                <h3>Links</h3>
+                <div class="hline mb-3 mt-3"></div>
+                <a href="#">Contacts Us</a><br />
+
+                <a href="#">Gallery</a><br />
+                <a href="#"> Articles</a><br />
+                <a href="#">FAQs</a><br />
+                <a href="#">Sign In/Registration</a><br />
+                <a href="#">Coming Soon</a>
+
+            </div>
+            <div class="col-sm-3 mt-3">
+                <h3>Contacts</h3>
+                <div class="hline mb-3 mt-3"></div>
+                <p class="text-white">Enter your email address to our<br />newsletter subscription </p>
+                <input type="text" class="p-1 rounded-1" placeholder=" Your email" />
+                <div class="btn btn-info  ">Subscribe &rarr;</div><br />
+                <a href="https://www.facebook.com/profile.php?id=100086241265899&mibextid=ZbWKwL" target="_blank"> <i class="fa-brands fa-facebook fs-4 mt-4 mx-2 "></i></a>
+                <a href="#" target="_blank"> <i class="fa-brands fa-twitter  text-primary mx-2 fs-4 "></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-youtube mx-2 fs-4  text-danger "></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram mx-2 fs-4  "></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-linkedin mx-2 fs-4  "></i></a>
+            </div>
+            <div class="col-sm-1 px-0"></div>
+        </div>
+        <div class="row " style="height:50px;background-color:black">
+            <div class="col-sm-6">
+                Developed By:Er Rampravesh
+            </div>
+            <div class="col-sm-6">
+                &copy;Techpile Technology Pvt. Ltd.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "issuebook";
+    Layout = "~/Views/Shared/StudentLayout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row ">
+        <h2 class="text-primary text-center"> Issue BOOK</h2>
+        @if(ViewBag.data.Rows.Count > 0)
+        {
+
+            foreach (var row in ViewBag.data.Rows)
+            {
+                <div class="card m-1" style="width: 18rem;">
+                    @*  <img src="~/Content/BookPhotos/@row["Bpic"]" height="50" width="50" class="card-img-top" alt="...">
+                    *@
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item text-primary"><b style=" color:black ! important">Issue Id - </b>@row[1]</li>
+                        <li class="list-group-item text-primary"><b style=" color:black ! important">Book Name - </b>@row[2]</li>
+                        <li class="list-group-item text-primary"><b style=" color:black ! important">Member Id - </b>@row[4]</li>
+                        <li class="list-group-item text-primary"><b style=" color:black ! important">Issue Date - </b>@row[5]</li>
+                        <li class="list-group-item text-primary"><b style=" color:black ! important">Due Date - </b>@row[3]</li>
+                        <li class="list-group-item text-primary"><b style=" color:black ! important">Return Date - </b>@row[6]</li>
+                        <li class="list-group-item text-primary"><b style=" color:black ! important">Issue By - </b>@row[7]</li>
+
+                    </ul>
+
+                </div>
+            }
+        }
+
+    </div>
+</div>
+
+
+

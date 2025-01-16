@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "returnbook";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="container">
+
+  
+    <div class="row my-4">
+        <div class="col-sm-12 ">
+
+            <table class="table table-bordered table-hover" id="myTable">
+                <thead class="table-dark">
+                    <tr>
+                        <th>sr</th>
+                        <th>Book Name</th>
+                        <th>Return Date</th>
+                        <th>Condition </th>
+                        <th>Late Fee</th>
+                        <th>Issue By </th>
+                        <th>Return book</th>
+                        <th>Remark</th>
+                        
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @if(ViewBag.data.Rows.Count > 0)
+        {
+            foreach (var row in ViewBag.data.Rows)
+            {
+
+
+                <tr>
+                    <td>@row[0]</td>
+                    <td>@row[7]</td>
+                    <td>@row[1]</td>
+                    <td>@row[2]</td>
+                    <td>@row[3]</td>
+                    <td>@row[4]</td>
+                    <td>@row[5]</td>
+                    <td>@row[6]</td>
+                    
+                </tr>
+            }
+        }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

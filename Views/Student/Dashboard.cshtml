@@ -1,0 +1,152 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/StudentLayout.cshtml";
+}
+<style>
+    .a{
+        height:150px;
+    }
+</style>
+<div class="=container">
+    <div class="row ">
+        <div class="col-sm-2 py-4 border border-info"style="background: #26A69A; ">
+            <h3 class=" text-center ">My Account</h3>
+            <hr class="text-light" />
+           
+            
+            @if(Session["email"] == null)
+            {
+                
+
+                <script>
+                    alert("Please login first");
+                    window.location.href = "/home/index";
+                </script>
+            }
+            else
+            {
+               
+                <h5 class="  text-light">Email:@Session[1]</h5>
+                <h5 class="  text-light">Dob:@Session[2]</h5>
+                <h5 class=" text-light">Pincode:@Session[3]</h5>
+                <h5 class="text-light">State:@Session[4]</h5>
+                <h5 class="text-light">City:@Session[5]</h5>
+                <h5 class="text-light">@Session[6]</h5>
+                <h5 class="text-light">@Session[7]</h5>
+               
+              
+            }
+
+
+
+        </div>
+            <div class="col-sm-10">
+                <div class="row  my-4">
+                    <div class="col-sm-3   px-4 ">
+                        <div class="bg-primary rounded py-3 a">
+                            <h3 class="text-center pt-2">Total Author</h3>
+                            @if(ViewBag.data1.Rows.Count > 0)
+                            {
+
+                                foreach (var row in ViewBag.data1.Rows)
+                                {
+                                  <h2 class="text-center">@row[0]</h2>
+                                }
+                            }
+                                </div>
+                    </div>
+                    <div class="col-sm-3  px-4 ">
+                        <div class="bg-success rounded a">
+                            <h3 class="text-center pt-3">Total price of book</h3>
+                            @if(ViewBag.data2.Rows.Count > 0)
+                            {
+
+                                foreach (var row in ViewBag.data2.Rows)
+                                {
+                                    <h2 class="text-center">@row[0]</h2>
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="col-sm-3   px-4 ">
+                        <a href="/student/book" style="text-decoration:none">
+                            <div class="a rounded" style="background: #009688">
+
+                                <h3 class="text-center pt-3">Total  book</h3>
+                                @if(ViewBag.data3.Rows.Count > 0)
+                                {
+
+                                    foreach (var row in ViewBag.data3.Rows)
+                                    {
+                                        <h2 class="text-center">@row[0]</h2>
+                                    }
+                                }
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-3  px-4 ">
+                        <div class="a rounded" style="background: #8a7dc8;">
+                            <h3 class="text-center pt-3">Total  Student</h3>
+                            @if(ViewBag.data4.Rows.Count > 0)
+                            {
+
+                                foreach (var row in ViewBag.data4.Rows)
+                                {
+                                    <h2 class="text-center">@row[0]</h2>
+                                }
+                            }
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row my-4">
+                    <div class="col-sm-6 px-4 ">
+                        <img src="~/Content/imges/slideimg1.jpg" class="w-100" />
+                    </div>
+                    <div class="col-sm-3  px-4 ">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                @if (ViewBag.data4.Rows.Count > 0)
+                                {
+
+                                    foreach (var row in ViewBag.data5.Rows)
+                                    {
+                                        <a href="/student/issuebook" style="text-decoration:none">
+                                            <div class="a rounded my-4" style="background: #8a7dc8;">
+                                                <h3 class="text-center pt-3">Issue Book</h3>
+                                                <h2 class="text-center ">@row[0]</h2>
+                                            </div>
+                                        </a>
+                                        <div class="a rounded my-4" style="background: #f47d01;"></div>
+                                    }
+                                }
+                                    </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-3  px-4 ">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="a rounded my-4" style="background: #638091;">
+                                    <a href="/student/issuebook" style="text-decoration:none">
+                                        <div class="a rounded my-4" style="background: #8a7dc8;">
+                                            <h3 class="text-center pt-3">Return Book</h3>
+                                            <h2 class="text-center "></h2>
+                                        </div>
+                                    </a>
+                                    <div class="a rounded my-4" style="background: #f47d01;"></div>
+                                </div>
+                                <div class="a rounded my-4" style="background: #29c1f4;"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+

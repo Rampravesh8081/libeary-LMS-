@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Dashbord";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+            
+<div class="container">
+    <div class="row my-4 ">
+        <h2 class="text-center my-2 text-primary" >Add Branch</h2>
+        <div class="col-sm-3 bg-primary rounded-2 py-3" style="max-height:300px">
+            <h2 class="my-3">Branch</h2>
+            <form method="post" action="/admin/addbranch">
+                <label>Branch Name</label>
+                <input type="text" placeholder="Course" class="form-control" name="branch" />
+                <label>Semester</label>
+                <input type="text" placeholder="Semester" class="form-control" name="sem" />
+                <br />
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-8 ">
+
+            <table class="table table-bordered table-hover" id="myTable">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Sr</th>
+                        <th>Course</th>
+                        <th>Semester</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (ViewBag.table1.Rows.Count > 0)
+                    {
+                        foreach (var row in ViewBag.table1.Rows)
+                        {
+
+
+                            <tr>
+                                <td>@row[0]</td>
+                                <td>@row[1]</td>
+                                <td>@row[3]</td>
+                                <td><button class="btn btn-danger">@row[2]</button></td>
+                                <td><button class=" btn btn-success">DELETE</button></td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

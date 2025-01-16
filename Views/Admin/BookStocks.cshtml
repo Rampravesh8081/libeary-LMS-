@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewBag.Title = "BookStocks";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row my-4 w-75 mx-auto  ">
+        <h2 class="text-center my-2 text-primary">Book Stocks</h2>
+        <div class="col-sm-12  bg-primary rounded-2 py-3" style="max-height:600px">
+            <h2 class="my-3 mx-auto">Stocks</h2>
+            <form method="post" action="/admin/bookstock" enctype="multipart/form-data">
+                <div class="row ">
+
+
+                    <div class="col-sm-6">
+                        <label>Book Id</label>
+                        <input type="number" placeholder="Book Id" name="BID" class="form-control" />
+                        <label>Author Name</label>
+                        <select name="Aname" class="form-control">
+                            <option>--select--</option>
+                            @if(ViewBag.table1.Rows.Count > 0)
+                            {
+                                foreach (var row in ViewBag.table1.Rows)
+                                {
+                                    <option value="@row[1]">@row[1]</option>
+                                }
+                            }
+                        </select>
+                        <label>Price</label>
+                        <input type="number" placeholder="price" name="Bprice" class="form-control" />
+                        <label>Language</label>
+                        <input type="text" placeholder="Language" name="lang" class="form-control" />
+                        <label>Book Picture</label>
+                        <input type="file" placeholder="Picture" name="pic" class="form-control" />
+                        <label>Publication Date</label>
+                        <input type="date" placeholder="Publication Date" name="pdate" class="form-control" />
+                        <button type="submit" class="btn btn-success my-4 w-100">Submit</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <label>Semester</label>
+                        <select name="Btitle" class="form-control">
+                            <option>--Select--</option>
+                            @if(ViewBag.table2.Rows.Count > 0)
+                            {
+                                foreach (var row in ViewBag.table2.Rows)
+                                {
+                                    <option value="@row[3]">@row[3]</option>
+                                }
+                            }
+                        </select>
+                        <label>Category</label>
+                        <input type="text" placeholder="Category" name="bcat" class="form-control" />
+                        <label>Pages</label>
+                        <input type="number" placeholder="Pages" name="page" class="form-control" />
+                        <label>Branch</label>
+                        <select name="branch" class="form-control">
+                            <option>--select--</option>
+                            @if(ViewBag.table2.Rows.Count > 0)
+                            {
+                                foreach (var row in ViewBag.table2.Rows)
+                                {
+                                    <option value="@row[1]">@row[1]</option>
+                                }
+                            }
+                        </select>
+                        <label>Quantity</label>
+                        <input type="number" placeholder="Quantity" name="Bq" class="form-control" />
+                        <label>Date Added</label>
+                        <input type="date" placeholder="Book Added" name="badddate" class="form-control" />
+                        <label>Discription</label>
+                       <textarea class="form-control" name="Disc">About Details Who add this book...</textarea>
+                    </div>
+                    
+                </div>
+            </form>
+
+        </div>
+       
+
+    </div>
+    <div class="row my-4">
+        <div class="col-sm-12 ">
+
+            <table class="table table-bordered table-hover" id="myTable" style="font-size:13px" >
+                <thead class="table-dark">
+                    <tr>
+                        <th>Sr</th>
+                        <th>Book ID</th>
+                        <th>Author Name</th>
+                        <th>Language</th>
+                        <th>Pages</th>
+                        <th>Price</th>
+                        <th>Publish Date</th>
+                        <th>Book Picture</th>
+                        <th>Semester</th>
+                        <th>Category</th>
+                        <th>Branch</th>
+                        <th>Quantity</th>
+                        <th>Book Added Date</th>
+                        <th>Satus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                      @if(ViewBag.table3.Rows.Count > 0)
+        {
+            foreach (var row in ViewBag.table3.Rows)
+            {
+
+
+                <tr>
+                    <td>@row[0]</td>
+                    <td>@row[1]</td>
+                    <td>@row[2]</td>
+                    <td>@row[12]</td>
+                    <td>@row[13]</td>
+                    <td>@row[3]</td>
+                    <td>@row[4]</td>
+                    <td><img src="~/Content/BookPhotos/@row[11]" height="60" width="60"  /></td>
+                    <td>@row[5]</td>
+                    <td>@row[6]</td>
+                    <td>@row[7]</td>
+                    <td>@row[8]</td>
+                    <td>@row[9]</td>
+                    <td><button class=" btn btn-danger">@row[10]</button></td>
+                </tr>
+            }
+        }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

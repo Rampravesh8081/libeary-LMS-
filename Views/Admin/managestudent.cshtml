@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "managestudent";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="container ">
+    <div class="row my-4 ">
+        <h2 class="text-center my-2 text-primary">Manage Students</h2>
+        
+        <div class="col-sm-12  " style="max-width:600px">
+            <table class="table table-bordered  table-hover" id="myTable" style="font-size:14px">
+                <thead class="table-dark">
+                    <tr>
+                        
+                        <th>Name</th>
+                        <th>Date of birth</th>
+                        <th>Mobole No</th>
+                        <th>Email Id</th>
+                        <th>State</th>
+                        <th>City</th>
+                        <th>Pincode</th>
+                        <th>Branch</th>
+                        <th>Id</th>
+                        <th>Date</th>
+                        <th>Address</th>
+                        <th>Password</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if(ViewBag.data.Rows.Count > 0)
+                    {
+                        foreach (var row in ViewBag.data.Rows)
+                        {
+
+
+                            <tr>
+                                <td>@row[0]</td>
+                                <td>@row[1]</td>
+                                <td>@row[2]</td>
+                                <td>@row[3]</td>
+                                <td>@row[4]</td>
+                                <td>@row[5]</td>
+                                <td>@row[6]</td>
+                                <td>@row[7]</td>
+                                <td>@row[8]</td>
+                                <td>@row[9]</td>
+                                <td>@row[10]</td>
+                                <td>@row[11]</td>
+                               
+                                                                                 <td><a href="/admin/updatestatus?email=@row["email"]&status=@(Convert.ToInt32(row["status"]))"> <button class=" btn btn-danger">@row[12]</button></a></td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+
+

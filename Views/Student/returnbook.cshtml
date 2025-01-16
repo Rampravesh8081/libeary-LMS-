@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "returnbook";
+    Layout = "~/Views/Shared/StudentLayout.cshtml";
+}
+
+<div class="container">
+
+    <div class="row">
+        <h2 class="text-center my-3 text-primary">Return Book</h2>
+        <div class="col-sm-12 w-50 mx-auto bg-primary rounded my-3 ">
+            <form method="post" action="/student/returnbookss">
+                <div class="row my-2">
+
+                    <div class="col-sm-6">
+                        <label>Book Name</label>
+                        <select  name="bookname" class="form-control">
+                            <option>--select--</option>
+                            @if(ViewBag.Data.Rows.Count > 0)
+                            {
+                                foreach (var row in ViewBag.Data.Rows)
+                                {
+                                    <option value="@row[2]">@row[2]</option>
+
+                                }
+                            }
+
+                        </select>
+                        <label>Return Date</label>
+                        <input type="Date" placeholder="Return Date" class="form-control" name="rdate" />
+                        <label>Late fee</label>
+                        <input type="number" placeholder="Late fee" class="form-control" name="latefee" />
+
+                    </div>
+                    <div class="col-sm-6">
+                        <label>Issue By</label>
+                        <select name="bookname" class="form-control">
+                            <option>--select--</option>
+                            @if(ViewBag.Data.Rows.Count > 0)
+                            {
+                                foreach (var row in ViewBag.Data.Rows)
+                                {
+                                    <option value="@row[7]">@row[7]</option>
+
+                                }
+                            }
+                            </select>
+                            <label>Return By</label>
+                            <input type="text" placeholder="Return by" class="form-control" name="returnby" />
+
+                            <label>Remark</label>
+                            <input type="text" placeholder="Remark" class="form-control" name="remark" />
+                    </div>
+                </div>
+                <label>Condition on Return</label>
+                <textarea type="text" name="bookcon" class="form-control"></textarea>
+
+
+                <input type="submit" value="Sumbit" class=" form-control my-3 btn btn-success" />
+            </form>
+        </div>
+    </div>
+   
+</div>
+
